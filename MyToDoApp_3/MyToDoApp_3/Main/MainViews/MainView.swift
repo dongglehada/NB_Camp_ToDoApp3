@@ -55,7 +55,7 @@ private extension MainView{
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(logoImage.snp.bottom).offset(Constant.defalutHeightPadding)
         }
-        checkListButton.addTarget(self, action: #selector(mainButtonTapped(_:)), for: .touchUpInside)
+        checkListButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
     
     func setUpCmpListButton(){
@@ -64,7 +64,7 @@ private extension MainView{
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(checkListButton.snp.bottom).offset(Constant.defalutHeightPadding)
         }
-        cmpListButton.addTarget(self, action: #selector(mainButtonTapped(_:)), for: .touchUpInside)
+        cmpListButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
     
     func setUpProfileVCButton(){
@@ -73,10 +73,10 @@ private extension MainView{
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(cmpListButton.snp.bottom).offset(Constant.defalutHeightPadding)
         }
-        profileVCButton.addTarget(self, action: #selector(mainButtonTapped(_:)), for: .touchUpInside)
+        profileVCButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
     
-    @objc func mainButtonTapped(_ sender: Any?){
+    @objc func buttonTapped(_ sender: Any?){
         
         guard let button = sender as? UIButton else { return }
         var vc = UIViewController()

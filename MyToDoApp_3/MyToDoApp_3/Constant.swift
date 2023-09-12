@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+struct Constant{
+    
+    static let viewWidth = UIScreen.main.bounds.width
+    
+    static let viewHeight = UIScreen.main.bounds.height
+    
+    static var defalutHeightPadding = viewHeight / 20
+    
+}

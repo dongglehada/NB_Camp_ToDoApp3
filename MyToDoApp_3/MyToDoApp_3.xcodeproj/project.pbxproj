@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019C2AB04582006F9A7D /* AppDelegate.swift */; };
 		08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019E2AB04582006F9A7D /* SceneDelegate.swift */; };
-		08DA01A12AB04582006F9A7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01A02AB04582006F9A7D /* ViewController.swift */; };
-		08DA01A42AB04582006F9A7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DA01A22AB04582006F9A7D /* Main.storyboard */; };
 		08DA01A62AB04582006F9A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DA01A52AB04582006F9A7D /* Assets.xcassets */; };
 		08DA01A92AB04582006F9A7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */; };
+		08DA01B22AB045DF006F9A7D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08DA01B12AB045DF006F9A7D /* SnapKit */; };
+		08DA01B42AB045FD006F9A7D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01B32AB045FD006F9A7D /* MainView.swift */; };
+		08DA01B62AB0463F006F9A7D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01B52AB0463F006F9A7D /* Extension.swift */; };
+		08DA01B92AB0490E006F9A7D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01B82AB0490E006F9A7D /* MainViewModel.swift */; };
+		08DA01BB2AB0504F006F9A7D /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01BA2AB0504F006F9A7D /* MainButton.swift */; };
+		08FB2A972AB0933B00109EE0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB2A962AB0933B00109EE0 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08DA01992AB04582006F9A7D /* MyToDoApp_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoApp_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DA019C2AB04582006F9A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DA019E2AB04582006F9A7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08DA01A02AB04582006F9A7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		08DA01A32AB04582006F9A7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08DA01A52AB04582006F9A7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08DA01A82AB04582006F9A7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08DA01AA2AB04582006F9A7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DA01B32AB045FD006F9A7D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		08DA01B52AB0463F006F9A7D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		08DA01B82AB0490E006F9A7D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		08DA01BA2AB0504F006F9A7D /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		08FB2A962AB0933B00109EE0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DA01B22AB045DF006F9A7D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +66,32 @@
 			children = (
 				08DA019C2AB04582006F9A7D /* AppDelegate.swift */,
 				08DA019E2AB04582006F9A7D /* SceneDelegate.swift */,
-				08DA01A02AB04582006F9A7D /* ViewController.swift */,
-				08DA01A22AB04582006F9A7D /* Main.storyboard */,
-				08DA01A52AB04582006F9A7D /* Assets.xcassets */,
+				08DA01B72AB048FB006F9A7D /* Main */,
 				08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */,
+				08DA01B52AB0463F006F9A7D /* Extension.swift */,
+				08FB2A962AB0933B00109EE0 /* Constant.swift */,
 				08DA01AA2AB04582006F9A7D /* Info.plist */,
+				08DA01A52AB04582006F9A7D /* Assets.xcassets */,
 			);
 			path = MyToDoApp_3;
+			sourceTree = "<group>";
+		};
+		08DA01B72AB048FB006F9A7D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				08DA01B82AB0490E006F9A7D /* MainViewModel.swift */,
+				08FB2A982AB09C5900109EE0 /* MainViews */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		08FB2A982AB09C5900109EE0 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				08DA01B32AB045FD006F9A7D /* MainView.swift */,
+				08DA01BA2AB0504F006F9A7D /* MainButton.swift */,
+			);
+			path = MainViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +110,9 @@
 			dependencies = (
 			);
 			name = MyToDoApp_3;
+			packageProductDependencies = (
+				08DA01B12AB045DF006F9A7D /* SnapKit */,
+			);
 			productName = MyToDoApp_3;
 			productReference = 08DA01992AB04582006F9A7D /* MyToDoApp_3.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 08DA01902AB04582006F9A7D;
+			packageReferences = (
+				08DA01B02AB045DF006F9A7D /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 08DA019A2AB04582006F9A7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +160,6 @@
 			files = (
 				08DA01A92AB04582006F9A7D /* LaunchScreen.storyboard in Resources */,
 				08DA01A62AB04582006F9A7D /* Assets.xcassets in Resources */,
-				08DA01A42AB04582006F9A7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +170,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08DA01A12AB04582006F9A7D /* ViewController.swift in Sources */,
+				08FB2A972AB0933B00109EE0 /* Constant.swift in Sources */,
+				08DA01B92AB0490E006F9A7D /* MainViewModel.swift in Sources */,
+				08DA01B42AB045FD006F9A7D /* MainView.swift in Sources */,
+				08DA01BB2AB0504F006F9A7D /* MainButton.swift in Sources */,
 				08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */,
 				08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */,
+				08DA01B62AB0463F006F9A7D /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		08DA01A22AB04582006F9A7D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08DA01A32AB04582006F9A7D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +319,6 @@
 				INFOPLIST_FILE = MyToDoApp_3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +345,6 @@
 				INFOPLIST_FILE = MyToDoApp_3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08DA01B02AB045DF006F9A7D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08DA01B12AB045DF006F9A7D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DA01B02AB045DF006F9A7D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08DA01912AB04582006F9A7D /* Project object */;
 }

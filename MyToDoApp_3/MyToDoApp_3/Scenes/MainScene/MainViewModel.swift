@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-class MainViewModel{
-    
+final class MainViewModel{
     
     let logoURL = "https://spartacodingclub.kr/css/images/scc-og.jpg"
     

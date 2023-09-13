@@ -77,9 +77,8 @@ private extension MainViewController{
     }
     
     @objc func buttonTapped(_ button: UIButton){
-        
+        print(#function)
         var vc = UIViewController()
-        
         switch button{
         case checkListButton:
             vc = ToDoListViewController()
@@ -90,7 +89,7 @@ private extension MainViewController{
         default:
             print("Please connect a new VC")
         }
-        self.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

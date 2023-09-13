@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewModel{
     
-
+    
+    let logoURL = "https://spartacodingclub.kr/css/images/scc-og.jpg"
     
 }

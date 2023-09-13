@@ -38,7 +38,7 @@ private extension MainViewController{
     
     func setUpLogoImageView(){
         view.addSubview(logoImage)
-        guard let url = URL(string: "https://spartacodingclub.kr/css/images/scc-og.jpg") else { return }
+        guard let url = URL(string: viewModel.logoURL) else { return }
         logoImage.urlLoad(url: url)
         logoImage.contentMode = .scaleAspectFit
         logoImage.snp.makeConstraints { make in

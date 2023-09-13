@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class MainView: UIViewController {
+final class MainViewController: UIViewController {
     
     private let logoImage = UIImageView()
     
@@ -26,7 +26,7 @@ final class MainView: UIViewController {
     }
 }
 
-private extension MainView{
+private extension MainViewController{
     // MARK: - SetUp
     
     func setUp(){
@@ -76,22 +76,21 @@ private extension MainView{
         profileVCButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
     
-    @objc func buttonTapped(_ sender: Any?){
+    @objc func buttonTapped(_ button: UIButton){
         
-        guard let button = sender as? UIButton else { return }
         var vc = UIViewController()
         
         switch button{
         case checkListButton:
-            print(button.titleLabel?.text)
+            vc = ToDoListViewController()
         case cmpListButton:
-            print(button.titleLabel?.text)
+            vc = DoneListViewController()
         case profileVCButton:
-            print(button.titleLabel?.text)
+            vc = ProfileViewController()
         default:
-            print("hi~")
+            print("Please connect a new VC")
         }
-//        self.present(vc, animated: true)
+        self.present(vc, animated: true)
     }
     
 }

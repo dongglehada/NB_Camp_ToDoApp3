@@ -42,8 +42,8 @@ private extension MainViewController{
         logoImage.urlLoad(url: url)
         logoImage.contentMode = .scaleAspectFit
         logoImage.snp.makeConstraints { make in
-            make.width.equalTo(Constant.viewWidth / 2)
-            make.height.equalTo(Constant.viewWidth / 4)
+            make.width.equalTo(Constant.main.logoImageWidth)
+            make.height.equalTo(Constant.main.logoImageHeight)
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(Constant.defalutHeightPadding * 2)
         }

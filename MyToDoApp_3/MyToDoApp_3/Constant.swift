@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Constant{
+class Constant{
     
     static let viewWidth = UIScreen.main.bounds.width
     
@@ -16,4 +16,11 @@ struct Constant{
     
     static var defalutHeightPadding = viewHeight / 20
     
+    static let main = MainViewConstant()
+    
+}
+
+final class MainViewConstant: Constant{
+    let logoImageWidth = viewWidth / 2
+    let logoImageHeight = viewWidth / 4
 }

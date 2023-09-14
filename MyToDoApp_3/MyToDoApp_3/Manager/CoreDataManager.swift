@@ -157,6 +157,7 @@ final class CoreDataManager{
                         appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
                     }
                 }
+                completion()
             } catch {
                 print("지우는 것 실패")
                 completion()

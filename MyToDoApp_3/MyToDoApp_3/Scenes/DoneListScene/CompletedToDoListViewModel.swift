@@ -1,48 +1,39 @@
 //
-//  ToDoListViewModel.swift
+//  CompletedToDoListViewModel.swift
 //  MyToDoApp_3
 //
-//  Created by SeoJunYoung on 2023/09/13.
+//  Created by SeoJunYoung on 2023/09/14.
 //
 
 import Foundation
-import CoreData
 
-
-final class TodoListViewModel{
+final class CompletedToDoListViewModel{
     
     var viewUpdate : () -> Void = {}
-    
     private var coreDataManager = CoreDataManager.shared
 
-    func getToDoList() -> [Task]{
-        print(#function)
-        return coreDataManager.getToDoListFromCoreData()
+    func getToDoFilterList() -> [Task]{
+        return coreDataManager.getToDoListFromCoreData().filter{$0.isCompleted}
     }
     
     func updateToDoCompletedToggle(task: Task){
-        print(#function)
         coreDataManager.updateCompleted(task: task) {
             self.viewUpdate()
         }
     }
     
     func addToDo(title: String){
-        print(#function)
         coreDataManager.saveToDoData(title: title) {
             self.viewUpdate()
         }
     }
 
     func deleteToDo(task:Task){
-        print(#function)
         coreDataManager.deleteToDo(task: task) {
             self.viewUpdate()
         }
     }
-    
     func updateToDoTitle(task:Task, title:String){
-        print(#function)
         coreDataManager.updateToDo(task: task, title: title) {
             self.viewUpdate()
         }

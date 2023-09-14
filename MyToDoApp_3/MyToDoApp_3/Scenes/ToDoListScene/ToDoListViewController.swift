@@ -40,6 +40,7 @@ private extension ToDoListViewController{
     
     func setUpTableView(){
         view.addSubview(myTableview)
+        myTableview.register(ToDoListCell.self, forCellReuseIdentifier: ToDoListCell.identifier)
         myTableview.dataSource = self
         myTableview.delegate = self
         myTableview.snp.makeConstraints { make in
@@ -79,8 +80,9 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = myTableview.dequeueReusableCell(withIdentifier: ToDoListCell.identifier ,for: indexPath) as? ToDoListCell else { return UITableViewCell() }
+        let tasks = Array(viewModel.getToDoList().reversed())
         cell.cellDelegate = self
-        cell.bind(task: viewModel.getToDoList().reversed()[indexPath.row])
+        cell.bind(task: tasks[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -118,6 +120,4 @@ extension ToDoListViewController: ButtonTappedDelegate{
         print(#function)
         viewModel.updateToDoCompletedToggle(task: task)
     }
-    
-
 }

@@ -13,7 +13,6 @@ class ListTableView: UITableView {
         super.init(frame: CGRect.zero, style: .plain)
         self.showsVerticalScrollIndicator = true
         self.contentInset = .zero
-        self.register(ToDoListCell.self, forCellReuseIdentifier: ToDoListCell.identifier)
         self.rowHeight = 44
     }
     

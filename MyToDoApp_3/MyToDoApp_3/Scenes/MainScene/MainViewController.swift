@@ -83,7 +83,7 @@ private extension MainViewController{
         case checkListButton:
             vc = ToDoListViewController()
         case cmpListButton:
-            vc = CompletedToDoListVC()
+            vc = CompletedToDoListViewController()
         case profileVCButton:
             vc = ProfileViewController()
         default:

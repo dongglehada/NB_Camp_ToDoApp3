@@ -9,23 +9,25 @@ import UIKit
 import SnapKit
 
 final class ToDoListViewController: UIViewController {
-
+    // MARK: - 프로퍼티
     private let viewModel = TodoListViewModel()
     
     private let myTableview = ListTableView()
     
     private let addButton = TitleSetButton(title: "추가", fontColor: .link)
     
+}
+extension ToDoListViewController{
+    // MARK: - 라이프 사이클
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-        
     }
-    
 }
 
 private extension ToDoListViewController{
-    
+    // MARK: - 메서드
+
     func setUp(){
         view.backgroundColor = .systemBackground
         setUpTableView()

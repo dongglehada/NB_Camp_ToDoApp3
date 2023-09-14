@@ -76,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				08DA01A52AB04582006F9A7D /* Assets.xcassets */,
-				08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */,
 				08DA01AA2AB04582006F9A7D /* Info.plist */,
 			);
 			path = Resource;
@@ -139,6 +138,7 @@
 				0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */,
 				08DA01BA2AB0504F006F9A7D /* TitleSetButton.swift */,
 				0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */,
+				08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -164,12 +164,12 @@
 			children = (
 				08DA019C2AB04582006F9A7D /* AppDelegate.swift */,
 				08DA019E2AB04582006F9A7D /* SceneDelegate.swift */,
-				0854F9AB2AB2BE0A009DF9A5 /* Manager */,
 				08461D992AB175BF0079E581 /* Scenes */,
 				08461DD32AB1FCB40079E581 /* Helpers */,
 				08461DD12AB1F9850079E581 /* Models */,
-				08461D9A2AB175DC0079E581 /* Resource */,
+				0854F9AB2AB2BE0A009DF9A5 /* Manager */,
 				0854F9AE2AB2FB06009DF9A5 /* SharedViews */,
+				08461D9A2AB175DC0079E581 /* Resource */,
 			);
 			path = MyToDoApp_3;
 			sourceTree = "<group>";

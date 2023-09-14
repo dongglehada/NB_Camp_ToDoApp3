@@ -56,20 +56,11 @@ final class CoreDataManager{
                     toDoData.createDate = Date.now
                     toDoData.isCompleted = false
                     toDoData.modifyDate = Date.now
-
-                    //appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
-                    if context.hasChanges {
-                        do {
-                            try context.save()
-                            completion()
-                        } catch {
-                            print(error)
-                            completion()
-                        }
-                    }
+                    appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
                 }
             }
         }
+        completion()
     }
     
     // MARK: - [Delete] 코어데이터에서 데이터 삭제하기 (일치하는 데이터 찾아서 ===> 삭제)
@@ -94,17 +85,7 @@ final class CoreDataManager{
                     // 임시저장소에서 (요청서를 통해서) 데이터 삭제하기 (delete메서드)
                     if let targetToDo = fetchedToDoList.first {
                         context.delete(targetToDo)
-
-                        //appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
-                        if context.hasChanges {
-                            do {
-                                try context.save()
-                                completion()
-                            } catch {
-                                print(error)
-                                completion()
-                            }
-                        }
+                        appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
                     }
                 }
                 completion()
@@ -139,17 +120,7 @@ final class CoreDataManager{
                         // MARK: - ToDoData에 실제 데이터 재할당(바꾸기) ⭐️
                         targetToDo.title = title
                         targetToDo.modifyDate = Date.now
-
-                        //appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
-                        if context.hasChanges {
-                            do {
-                                try context.save()
-                                completion()
-                            } catch {
-                                print(error)
-                                completion()
-                            }
-                        }
+                        appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
                     }
                 }
                 completion()
@@ -183,16 +154,7 @@ final class CoreDataManager{
                         // MARK: - ToDoData에 실제 데이터 재할당(바꾸기) ⭐️
                         targetToDo.isCompleted.toggle()
                         targetToDo.modifyDate = Date.now
-                        //appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
-                        if context.hasChanges {
-                            do {
-                                try context.save()
-                                completion()
-                            } catch {
-                                print(error)
-                                completion()
-                            }
-                        }
+                        appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
                     }
                 }
             } catch {

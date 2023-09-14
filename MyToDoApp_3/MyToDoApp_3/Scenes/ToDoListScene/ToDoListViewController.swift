@@ -12,15 +12,9 @@ final class ToDoListViewController: UIViewController {
 
     private let viewModel = TodoListViewModel()
     
-    private let myTableview: UITableView = {
-        let view = UITableView(frame: .zero, style: .grouped)
-        view.showsVerticalScrollIndicator = true
-        view.contentInset = .zero
-        view.register(ToDoListCell.self, forCellReuseIdentifier: ToDoListCell.identifier)
-        return view
-    }()
+    private let myTableview = ListTableView()
     
-    private let addButton = MainButton(title: "추가", fontColor: .link)
+    private let addButton = TitleSetButton(title: "추가", fontColor: .link)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +57,7 @@ private extension ToDoListViewController{
         let alert = UIAlertController(title: "할일 추가", message: "", preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "완료", style: .default) { _ in
-            guard let text = alert.textFields?[0].text else { return }
+            guard let text = alert.textFields?.first?.text else { return }
             self.viewModel.addToDo(title: text)
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel) { _ in }
@@ -78,20 +72,20 @@ private extension ToDoListViewController{
 extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.taskList.count
+        return viewModel.getToDoList().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = myTableview.dequeueReusableCell(withIdentifier: ToDoListCell.identifier ,for: indexPath) as? ToDoListCell else { return UITableViewCell() }
         cell.cellDelegate = self
-        cell.bind(task: viewModel.taskList.reversed()[indexPath.row])
+        cell.bind(task: viewModel.getToDoList().reversed()[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             let alert = UIAlertController(title: "메모를 삭제합니다", message: "", preferredStyle: .alert)
             let ok = UIAlertAction(title: "확인", style: .default) { _ in
-                self.viewModel.deleteToDo(task: self.viewModel.taskList.reversed()[indexPath.row])
+                self.viewModel.deleteToDo(task: self.viewModel.getToDoList().reversed()[indexPath.row])
             }
             let cancel = UIAlertAction(title: "취소", style: .cancel) { _ in }
             alert.addAction(cancel)
@@ -105,7 +99,7 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource{
         let alert = UIAlertController(title: "메모 수정", message: "", preferredStyle: .alert)
         let ok = UIAlertAction(title: "확인", style: .default) { _ in
             guard let title = alert.textFields?.first?.text else { return }
-            self.viewModel.updateToDoTitle(task: self.viewModel.taskList.reversed()[indexPath.row], title: title)
+            self.viewModel.updateToDoTitle(task: self.viewModel.getToDoList().reversed()[indexPath.row], title: title)
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel) { _ in }
         alert.addTextField()

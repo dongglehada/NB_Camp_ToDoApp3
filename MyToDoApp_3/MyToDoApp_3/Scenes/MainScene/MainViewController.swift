@@ -12,11 +12,11 @@ final class MainViewController: UIViewController {
     
     private let logoImage = UIImageView()
     
-    private let checkListButton = MainButton(title: "할일 확인하기", fontColor: .link)
+    private let checkListButton = TitleSetButton(title: "할일 확인하기", fontColor: .link)
     
-    private let cmpListButton = MainButton(title: "완료한일 보기", fontColor: .link)
+    private let cmpListButton = TitleSetButton(title: "완료한일 보기", fontColor: .link)
     
-    private let profileVCButton = MainButton(title: "ProfileViewContorller", fontColor: .link)
+    private let profileVCButton = TitleSetButton(title: "ProfileViewContorller", fontColor: .link)
     
     private let viewModel = MainViewModel()
     
@@ -83,7 +83,7 @@ private extension MainViewController{
         case checkListButton:
             vc = ToDoListViewController()
         case cmpListButton:
-            vc = DoneListViewController()
+            vc = CompletedToDoListVC()
         case profileVCButton:
             vc = ProfileViewController()
         default:

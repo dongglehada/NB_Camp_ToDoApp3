@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 
 final class TodoListViewModel{
@@ -14,35 +15,44 @@ final class TodoListViewModel{
     
     private var coreDataManager = CoreDataManager.shared
     
-    lazy var taskList = self.coreDataManager.getToDoListFromCoreData(){
-        didSet{
-            viewUpdate()
-        }
+//    lazy var taskList = self.coreDataManager.getToDoListFromCoreData(){
+//        didSet{
+//            viewUpdate()
+//        }
+//    }
+
+    func getToDoList() -> [Task]{
+        return coreDataManager.getToDoListFromCoreData()
     }
-    private func taskListUpdate(){
-        self.taskList = self.coreDataManager.getToDoListFromCoreData()
-    }
+    
+//    func taskListUpdate(){
+//        self.taskList = self.coreDataManager.getToDoListFromCoreData()
+//    }
     
     func updateToDoCompletedToggle(task: Task){
         coreDataManager.updateCompleted(task: task) {
-            self.taskListUpdate()
+//            self.taskListUpdate()
+            self.viewUpdate()
         }
     }
     
     func addToDo(title: String){
         coreDataManager.saveToDoData(title: title) {
-            self.taskListUpdate()
+//            self.taskListUpdate()
+            self.viewUpdate()
         }
     }
 
     func deleteToDo(task:Task){
         coreDataManager.deleteToDo(task: task) {
-            self.taskListUpdate()
+//            self.taskListUpdate()
+            self.viewUpdate()
         }
     }
     func updateToDoTitle(task:Task, title:String){
         coreDataManager.updateToDo(task: task, title: title) {
-            self.taskListUpdate()
+//            self.taskListUpdate()
+            self.viewUpdate()
         }
     }
 }

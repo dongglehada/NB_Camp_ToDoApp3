@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DoneListViewController: UIViewController {
+class CompletedToDoListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

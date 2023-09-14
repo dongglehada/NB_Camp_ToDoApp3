@@ -13,6 +13,7 @@
 		08461DA32AB1957D0079E581 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08461DA22AB1957D0079E581 /* ToDoListViewModel.swift */; };
 		08461DD02AB1F95B0079E581 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08461DCF2AB1F95B0079E581 /* CoreDataManager.swift */; };
 		08461DD22AB1FC4F0079E581 /* MyToDoApp_3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08461DC22AB1F7DA0079E581 /* MyToDoApp_3.xcdatamodeld */; };
+		0854F9AD2AB2CFA3009DF9A5 /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */; };
 		08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019C2AB04582006F9A7D /* AppDelegate.swift */; };
 		08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019E2AB04582006F9A7D /* SceneDelegate.swift */; };
 		08DA01A62AB04582006F9A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DA01A52AB04582006F9A7D /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		08461DA22AB1957D0079E581 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
 		08461DC32AB1F7DA0079E581 /* MyToDoApp_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyToDoApp_3.xcdatamodel; sourceTree = "<group>"; };
 		08461DCF2AB1F95B0079E581 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 		08DA01992AB04582006F9A7D /* MyToDoApp_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoApp_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DA019C2AB04582006F9A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DA019E2AB04582006F9A7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				08461DD32AB1FCB40079E581 /* Helpers */,
 				08461DD12AB1F9850079E581 /* Models */,
 				08461D9A2AB175DC0079E581 /* Resource */,
+				0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */,
 			);
 			path = MyToDoApp_3;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */,
 				08DA01B62AB0463F006F9A7D /* Extension.swift in Sources */,
 				08461DD02AB1F95B0079E581 /* CoreDataManager.swift in Sources */,
+				0854F9AD2AB2CFA3009DF9A5 /* ToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,4 +23,9 @@ extension UIImageView{
     }
 }
 
+extension CGFloat{
+    
+    static let defalutPadding:CGFloat = 16
+}
+
 

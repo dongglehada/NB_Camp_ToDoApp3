@@ -135,7 +135,7 @@ final class CoreDataManager{
                 // 요청서를 통해서 데이터 가져오기
                 if let fetchedToDoList = try context.fetch(request) as? [Task] {
                     // 배열의 첫번째
-                    if var targetToDo = fetchedToDoList.first {
+                    if let targetToDo = fetchedToDoList.first {
 
                         // MARK: - ToDoData에 실제 데이터 재할당(바꾸기) ⭐️
                         targetToDo.title = title
@@ -155,6 +155,48 @@ final class CoreDataManager{
                     }
                 }
                 completion()
+            } catch {
+                print("지우는 것 실패")
+                completion()
+            }
+        }
+    }
+    // MARK: - [Update] 코어데이터에서 데이터 수정하기 (일치하는 데이터 찾아서 ===> 수정)
+    func updateCompleted(task: Task, completion: @escaping () -> Void) {
+        
+        guard let id = task.id else {
+            completion()
+            return
+        }
+        
+        // 임시저장소 있는지 확인
+        if let context = context {
+            // 요청서
+            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelName)
+            // 단서 / 찾기 위한 조건 설정
+            request.predicate = NSPredicate(format: "id = %@", id as CVarArg)
+
+            do {
+                // 요청서를 통해서 데이터 가져오기
+                if let fetchedToDoList = try context.fetch(request) as? [Task] {
+                    // 배열의 첫번째
+                    if let targetToDo = fetchedToDoList.first {
+
+                        // MARK: - ToDoData에 실제 데이터 재할당(바꾸기) ⭐️
+                        targetToDo.isCompleted.toggle()
+                        targetToDo.modifyDate = Date.now
+                        //appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
+                        if context.hasChanges {
+                            do {
+                                try context.save()
+                                completion()
+                            } catch {
+                                print(error)
+                                completion()
+                            }
+                        }
+                    }
+                }
             } catch {
                 print("지우는 것 실패")
                 completion()

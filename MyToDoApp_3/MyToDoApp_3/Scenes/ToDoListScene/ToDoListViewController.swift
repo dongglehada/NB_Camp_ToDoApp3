@@ -13,10 +13,12 @@ final class ToDoListViewController: UIViewController {
     private let viewModel = TodoListViewModel()
     
     private let myTableview = UITableView()
+    private var coreDataManager = CoreDataManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        
     }
     
 }

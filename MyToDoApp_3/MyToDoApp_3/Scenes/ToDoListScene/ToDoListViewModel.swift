@@ -19,12 +19,30 @@ final class TodoListViewModel{
             viewUpdate()
         }
     }
+    private func taskListUpdate(){
+        self.taskList = self.coreDataManager.getToDoListFromCoreData()
+    }
     
-    func updateCompleted(task: Task){
-        coreDataManager.updateCompleted(task: task) { [weak self] in
-            guard let self = self else { return }
-            self.taskList = self.coreDataManager.getToDoListFromCoreData()
+    func updateToDoCompletedToggle(task: Task){
+        coreDataManager.updateCompleted(task: task) {
+            self.taskListUpdate()
+        }
+    }
+    
+    func addToDo(title: String){
+        coreDataManager.saveToDoData(title: title) {
+            self.taskListUpdate()
         }
     }
 
+    func deleteToDo(task:Task){
+        coreDataManager.deleteToDo(task: task) {
+            self.taskListUpdate()
+        }
+    }
+    func updateToDoTitle(task:Task, title:String){
+        coreDataManager.updateToDo(task: task, title: title) {
+            self.taskListUpdate()
+        }
+    }
 }

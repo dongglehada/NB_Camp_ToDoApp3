@@ -31,7 +31,13 @@ class ToDoListCell: UITableViewCell {
     
     func bind(task:Task){
         self.task = task
-        titleLabel.text = task.title
+        if task.isCompleted{
+            guard let title = task.title else { return }
+            titleLabel.attributedText = title.strikeThrough()
+        } else {
+            titleLabel.attributedText = nil
+            titleLabel.text = task.title
+        }
         let image = task.isCompleted ? UIImage(systemName: "checkmark.square") : UIImage(systemName: "square")
         completedButton.setImage(image, for: .normal)
     }

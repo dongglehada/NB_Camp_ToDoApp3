@@ -17,6 +17,10 @@
 		0854F9B02AB2FB96009DF9A5 /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */; };
 		0854F9B22AB3197D009DF9A5 /* CompletedToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */; };
 		08BE30AE2AB41EC6007E1ACD /* RandomImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */; };
+		08BE30B12AB4205A007E1ACD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B02AB4205A007E1ACD /* Secret.swift */; };
+		08BE30B32AB420CC007E1ACD /* CatApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B22AB420CC007E1ACD /* CatApiManager.swift */; };
+		08BE30B52AB421BA007E1ACD /* ImageDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B42AB421BA007E1ACD /* ImageDatum.swift */; };
+		08BE30B72AB424D8007E1ACD /* RandomImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B62AB424D8007E1ACD /* RandomImageViewModel.swift */; };
 		08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019C2AB04582006F9A7D /* AppDelegate.swift */; };
 		08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019E2AB04582006F9A7D /* SceneDelegate.swift */; };
 		08DA01A62AB04582006F9A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DA01A52AB04582006F9A7D /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 		0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
 		0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedToDoListViewModel.swift; sourceTree = "<group>"; };
 		08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewController.swift; sourceTree = "<group>"; };
+		08BE30B02AB4205A007E1ACD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		08BE30B22AB420CC007E1ACD /* CatApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApiManager.swift; sourceTree = "<group>"; };
+		08BE30B42AB421BA007E1ACD /* ImageDatum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDatum.swift; sourceTree = "<group>"; };
+		08BE30B62AB424D8007E1ACD /* RandomImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewModel.swift; sourceTree = "<group>"; };
 		08DA01992AB04582006F9A7D /* MyToDoApp_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoApp_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DA019C2AB04582006F9A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DA019E2AB04582006F9A7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				08461DC22AB1F7DA0079E581 /* MyToDoApp_3.xcdatamodeld */,
+				08BE30B42AB421BA007E1ACD /* ImageDatum.swift */,
 			);
 			name = Models;
 			path = Resource/Models;
@@ -134,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				08461DCF2AB1F95B0079E581 /* CoreDataManager.swift */,
+				08BE30B22AB420CC007E1ACD /* CatApiManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 		08BE30AF2AB41ECC007E1ACD /* RandomImageScene */ = {
 			isa = PBXGroup;
 			children = (
+				08BE30B62AB424D8007E1ACD /* RandomImageViewModel.swift */,
 				08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */,
 			);
 			path = RandomImageScene;
@@ -184,6 +195,7 @@
 				0854F9AB2AB2BE0A009DF9A5 /* Manager */,
 				0854F9AE2AB2FB06009DF9A5 /* SharedViews */,
 				08461D9A2AB175DC0079E581 /* Resource */,
+				08BE30B02AB4205A007E1ACD /* Secret.swift */,
 			);
 			path = MyToDoApp_3;
 			sourceTree = "<group>";
@@ -280,15 +292,19 @@
 				08FB2A972AB0933B00109EE0 /* Constant.swift in Sources */,
 				08DA01B92AB0490E006F9A7D /* MainViewModel.swift in Sources */,
 				08BE30AE2AB41EC6007E1ACD /* RandomImageViewController.swift in Sources */,
+				08BE30B12AB4205A007E1ACD /* Secret.swift in Sources */,
 				08461DA32AB1957D0079E581 /* ToDoListViewModel.swift in Sources */,
 				08DA01B42AB045FD006F9A7D /* MainViewController.swift in Sources */,
 				08DA01BB2AB0504F006F9A7D /* TitleSetButton.swift in Sources */,
 				08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */,
 				08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */,
+				08BE30B52AB421BA007E1ACD /* ImageDatum.swift in Sources */,
 				08DA01B62AB0463F006F9A7D /* Extension.swift in Sources */,
 				0854F9B22AB3197D009DF9A5 /* CompletedToDoListViewModel.swift in Sources */,
 				08461DD02AB1F95B0079E581 /* CoreDataManager.swift in Sources */,
 				0854F9B02AB2FB96009DF9A5 /* ListTableView.swift in Sources */,
+				08BE30B72AB424D8007E1ACD /* RandomImageViewModel.swift in Sources */,
+				08BE30B32AB420CC007E1ACD /* CatApiManager.swift in Sources */,
 				0854F9AD2AB2CFA3009DF9A5 /* ToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

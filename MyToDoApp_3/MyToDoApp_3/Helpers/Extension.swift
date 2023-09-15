@@ -10,12 +10,15 @@ import UIKit
 
 extension UIImageView{
     
-    func urlLoad(url:URL){
+    func urlLoad(url:URL, completion: @escaping () -> Void){
         DispatchQueue.global().async { [weak self] in
+            print("imageLoadStart")
             if let data = try? Data(contentsOf: url){
                 if let image = UIImage(data: data){
                     DispatchQueue.main.async {
                         self?.image = image
+                        print("imageLoadCompleted")
+                        completion()
                     }
                 }
             }

@@ -16,7 +16,7 @@ final class MainViewController: UIViewController {
     
     private let cmpListButton = TitleSetButton(title: "완료한일 보기", fontColor: .link)
     
-    private let randomImageButton = TitleSetButton(title: "Dog", fontColor: .link)
+    private let randomImageButton = TitleSetButton(title: "Cat Image", fontColor: .link)
     
     private let profileVCButton = TitleSetButton(title: "ProfileViewContorller", fontColor: .link)
     
@@ -42,7 +42,9 @@ private extension MainViewController{
     func setUpLogoImageView(){
         view.addSubview(logoImage)
         guard let url = URL(string: viewModel.logoURL) else { return }
-        logoImage.urlLoad(url: url)
+        logoImage.urlLoad(url: url){
+            
+        }
         logoImage.contentMode = .scaleAspectFit
         logoImage.snp.makeConstraints { make in
             make.width.equalTo(Constant.main.logoImageWidth)

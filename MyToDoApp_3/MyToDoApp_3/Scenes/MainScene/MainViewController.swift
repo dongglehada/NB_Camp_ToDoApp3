@@ -16,6 +16,8 @@ final class MainViewController: UIViewController {
     
     private let cmpListButton = TitleSetButton(title: "완료한일 보기", fontColor: .link)
     
+    private let randomImageButton = TitleSetButton(title: "Dog", fontColor: .link)
+    
     private let profileVCButton = TitleSetButton(title: "ProfileViewContorller", fontColor: .link)
     
     private let viewModel = MainViewModel()
@@ -33,6 +35,7 @@ private extension MainViewController{
         setUpLogoImageView()
         setUpCheckListButton()
         setUpCmpListButton()
+        setUpRandomImageButton()
         setUpProfileVCButton()
     }
     
@@ -67,11 +70,20 @@ private extension MainViewController{
         cmpListButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
     
+    func setUpRandomImageButton(){
+        view.addSubview(randomImageButton)
+        randomImageButton.snp.makeConstraints { make in
+            make.centerX.equalTo(view.snp.centerX)
+            make.top.equalTo(cmpListButton.snp.bottom).offset(Constant.defalutHeightPadding)
+        }
+        randomImageButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+    }
+    
     func setUpProfileVCButton(){
         view.addSubview(profileVCButton)
         profileVCButton.snp.makeConstraints { make in
             make.centerX.equalTo(view.snp.centerX)
-            make.top.equalTo(cmpListButton.snp.bottom).offset(Constant.defalutHeightPadding)
+            make.top.equalTo(randomImageButton.snp.bottom).offset(Constant.defalutHeightPadding)
         }
         profileVCButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
@@ -84,6 +96,8 @@ private extension MainViewController{
             vc = ToDoListViewController()
         case cmpListButton:
             vc = CompletedToDoListViewController()
+        case randomImageButton:
+            vc = RandomImageViewController()
         case profileVCButton:
             vc = ProfileViewController()
         default:

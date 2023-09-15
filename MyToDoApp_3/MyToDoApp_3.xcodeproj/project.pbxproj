@@ -16,6 +16,7 @@
 		0854F9AD2AB2CFA3009DF9A5 /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */; };
 		0854F9B02AB2FB96009DF9A5 /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */; };
 		0854F9B22AB3197D009DF9A5 /* CompletedToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */; };
+		08BE30AE2AB41EC6007E1ACD /* RandomImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */; };
 		08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019C2AB04582006F9A7D /* AppDelegate.swift */; };
 		08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019E2AB04582006F9A7D /* SceneDelegate.swift */; };
 		08DA01A62AB04582006F9A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DA01A52AB04582006F9A7D /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 		0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
 		0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedToDoListViewModel.swift; sourceTree = "<group>"; };
+		08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewController.swift; sourceTree = "<group>"; };
 		08DA01992AB04582006F9A7D /* MyToDoApp_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoApp_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DA019C2AB04582006F9A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DA019E2AB04582006F9A7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				08DA01B72AB048FB006F9A7D /* MainScene */,
 				08461D9B2AB1760D0079E581 /* ToDoListScene */,
 				08461D9E2AB176760079E581 /* DoneListScene */,
+				08BE30AF2AB41ECC007E1ACD /* RandomImageScene */,
 				08461DA12AB176AB0079E581 /* ProfileScene */,
 			);
 			path = Scenes;
@@ -144,6 +147,14 @@
 				08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		08BE30AF2AB41ECC007E1ACD /* RandomImageScene */ = {
+			isa = PBXGroup;
+			children = (
+				08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */,
+			);
+			path = RandomImageScene;
 			sourceTree = "<group>";
 		};
 		08DA01902AB04582006F9A7D = {
@@ -268,6 +279,7 @@
 				08461DA02AB176960079E581 /* ProfileViewController.swift in Sources */,
 				08FB2A972AB0933B00109EE0 /* Constant.swift in Sources */,
 				08DA01B92AB0490E006F9A7D /* MainViewModel.swift in Sources */,
+				08BE30AE2AB41EC6007E1ACD /* RandomImageViewController.swift in Sources */,
 				08461DA32AB1957D0079E581 /* ToDoListViewModel.swift in Sources */,
 				08DA01B42AB045FD006F9A7D /* MainViewController.swift in Sources */,
 				08DA01BB2AB0504F006F9A7D /* TitleSetButton.swift in Sources */,

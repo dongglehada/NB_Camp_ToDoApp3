@@ -125,7 +125,7 @@ final class CoreDataManager{
                 }
                 completion()
             } catch {
-                print("지우는 것 실패")
+                print("수정 실패")
                 completion()
             }
         }
@@ -159,7 +159,7 @@ final class CoreDataManager{
                 }
                 completion()
             } catch {
-                print("지우는 것 실패")
+                print("수정 실패")
                 completion()
             }
         }

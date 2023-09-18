@@ -97,7 +97,7 @@ final class CoreDataManager{
     }
     
     // MARK: - [Update] 코어데이터에서 데이터 수정하기 (일치하는 데이터 찾아서 ===> 수정)
-    func updateToDo(task: Task, title: String, completion: @escaping () -> Void) {
+    func updateToDo(task: Task, newTitle: String, completion: @escaping () -> Void) {
         
         guard let id = task.id else {
             completion()
@@ -118,7 +118,7 @@ final class CoreDataManager{
                     if let targetToDo = fetchedToDoList.first {
 
                         // MARK: - ToDoData에 실제 데이터 재할당(바꾸기) ⭐️
-                        targetToDo.title = title
+                        targetToDo.title = newTitle
                         targetToDo.modifyDate = Date.now
                         appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
                     }

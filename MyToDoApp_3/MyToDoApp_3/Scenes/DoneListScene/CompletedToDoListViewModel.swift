@@ -34,7 +34,7 @@ final class CompletedToDoListViewModel{
         }
     }
     func updateToDoTitle(task:Task, title:String){
-        coreDataManager.updateToDo(task: task, title: title) {
+        coreDataManager.updateToDo(task: task, newTitle: title) {
             self.viewUpdate()
         }
     }

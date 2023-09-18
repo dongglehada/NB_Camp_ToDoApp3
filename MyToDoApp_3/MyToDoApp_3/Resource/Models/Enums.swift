@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+enum CRUDOperator{
+    case add
+    case update
+    case delete
+}

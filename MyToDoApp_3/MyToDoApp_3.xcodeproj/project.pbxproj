@@ -35,6 +35,7 @@
 		08DA01B62AB0463F006F9A7D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01B52AB0463F006F9A7D /* Extension.swift */; };
 		08DA01B92AB0490E006F9A7D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01B82AB0490E006F9A7D /* MainViewModel.swift */; };
 		08DA01BB2AB0504F006F9A7D /* TitleSetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA01BA2AB0504F006F9A7D /* TitleSetButton.swift */; };
+		08F532EB2AB84024001B3581 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F532EA2AB84024001B3581 /* Enums.swift */; };
 		08FB2A972AB0933B00109EE0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB2A962AB0933B00109EE0 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		08DA01B52AB0463F006F9A7D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		08DA01B82AB0490E006F9A7D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		08DA01BA2AB0504F006F9A7D /* TitleSetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSetButton.swift; sourceTree = "<group>"; };
+		08F532EA2AB84024001B3581 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		08FB2A962AB0933B00109EE0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 			children = (
 				08461DC22AB1F7DA0079E581 /* MyToDoApp_3.xcdatamodeld */,
 				08BE30B42AB421BA007E1ACD /* ImageDatum.swift */,
+				08F532EA2AB84024001B3581 /* Enums.swift */,
 			);
 			name = Models;
 			path = Resource/Models;
@@ -324,6 +327,7 @@
 				08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */,
 				08BE30BB2AB43E41007E1ACD /* CountTitleVIew.swift in Sources */,
 				089F76752AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift in Sources */,
+				08F532EB2AB84024001B3581 /* Enums.swift in Sources */,
 				08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */,
 				08BE30B52AB421BA007E1ACD /* ImageDatum.swift in Sources */,
 				08DA01B62AB0463F006F9A7D /* Extension.swift in Sources */,

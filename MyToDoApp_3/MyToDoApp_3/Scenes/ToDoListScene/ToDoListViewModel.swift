@@ -42,7 +42,7 @@ final class TodoListViewModel{
     
     func updateToDoTitle(task:Task, title:String){
         print(#function)
-        coreDataManager.updateToDo(task: task, title: title) {
+        coreDataManager.updateToDo(task: task, newTitle: title) {
             self.viewUpdate()
         }
     }

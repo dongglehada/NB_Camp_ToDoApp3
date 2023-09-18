@@ -13,12 +13,12 @@ final class CoreDataManager{
     
     static let shared = CoreDataManager()
     private init() {}
-    
     private let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    
     private lazy var context = appDelegate?.persistentContainer.viewContext
-    
     private let modelName: String = "Task"
+}
+extension CoreDataManager{
+    // MARK: - CRUD
     
     // MARK: - [Read] 코어데이터에 저장된 데이터 모두 읽어오기
     func getToDoListFromCoreData() -> [Task] {
@@ -164,4 +164,5 @@ final class CoreDataManager{
             }
         }
     }
+
 }

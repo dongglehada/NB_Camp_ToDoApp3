@@ -10,6 +10,7 @@ import SnapKit
 
 final class ProfileView: UIView {
     
+    // MARK: - 프로퍼티
     private let userNameLabel = UILabel()
     private let menuButton = UIButton()
     private let profileImage = UIImageView()

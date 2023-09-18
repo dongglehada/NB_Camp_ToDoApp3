@@ -11,11 +11,8 @@ import SnapKit
 final class ToDoListViewController: UIViewController {
     // MARK: - 프로퍼티
     private let viewModel = TodoListViewModel()
-    
     private let myTableview = ListTableView()
-    
     private let addButton = TitleSetButton(title: "추가", fontColor: .link)
-    
 }
 
 extension ToDoListViewController{
@@ -27,7 +24,7 @@ extension ToDoListViewController{
 }
 
 private extension ToDoListViewController{
-    // MARK: - 메서드
+    // MARK: - SetUp 메서드
 
     func setUp(){
         view.backgroundColor = .systemBackground
@@ -49,11 +46,23 @@ private extension ToDoListViewController{
         }
     }
     
+    // MARK: - ButtonTapped 메서드
+
     func setUpAddButton(){
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addButton)
         addButton.addTarget(self, action: #selector(didTappedAddButton), for: .touchUpInside)
     }
     
+    @objc func didTappedAddButton(){
+        print(#function)
+        showAlert(title: "할일 추가", type: .add) { alert in
+            guard let text = alert.textFields?.first?.text else { return }
+            self.viewModel.addToDo(title: text)
+        }
+    }
+    
+    // MARK: - 일반 메서드
+
     func showAlert(title: String, type: CRUDOperator, closure: @escaping (_ alert:UIAlertController) -> Void){
         
         let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
@@ -72,14 +81,6 @@ private extension ToDoListViewController{
         alert.addAction(cancel)
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
-    }
-
-    @objc func didTappedAddButton(){
-        print(#function)
-        showAlert(title: "할일 추가", type: .add) { alert in
-            guard let text = alert.textFields?.first?.text else { return }
-            self.viewModel.addToDo(title: text)
-        }
     }
 }
 

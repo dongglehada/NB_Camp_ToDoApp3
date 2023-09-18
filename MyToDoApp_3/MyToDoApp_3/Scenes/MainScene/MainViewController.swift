@@ -9,17 +9,12 @@ import UIKit
 import SnapKit
 
 final class MainViewController: UIViewController {
-    
+    // MARK: - 프로퍼티
     private let logoImage = UIImageView()
-    
     private let checkListButton = TitleSetButton(title: "할일 확인하기", fontColor: .link)
-    
     private let cmpListButton = TitleSetButton(title: "완료한일 보기", fontColor: .link)
-    
     private let randomImageButton = TitleSetButton(title: "Cat Image", fontColor: .link)
-    
     private let profileVCButton = TitleSetButton(title: "ProfileViewContorller", fontColor: .link)
-    
     private let viewModel = MainViewModel()
 }
 
@@ -33,7 +28,7 @@ extension MainViewController{
 }
 
 private extension MainViewController{
-    // MARK: - SetUp
+    // MARK: - SetUp메서드
     
     func setUp(){
         setUpLogoImageView()
@@ -96,6 +91,8 @@ private extension MainViewController{
         profileVCButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
     
+    // MARK: - ButtonTapped메서드
+
     @objc func buttonTapped(_ button: UIButton){
         print(#function)
         var vc = UIViewController()

@@ -16,17 +16,14 @@ final class RandomImageViewController: UIViewController {
         activityIndicator.style = UIActivityIndicatorView.Style.large // indicator의 스타일 설정, large와 medium이 있음
         return activityIndicator
     }()
-    
-    private let imageView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
-    
+    private let imageView = UIImageView()
     private let refresh = TitleSetButton(title: "새로운 사진", fontColor: .link)
-    
     private let viewModel = RandomImageViewModel()
-    
+}
+
+extension RandomImageViewController{
+    // MARK: - 라이프 사이클
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -55,6 +52,7 @@ private extension RandomImageViewController{
     
     func setUpImageView(){
         view.addSubview(imageView)
+        imageView.contentMode = .scaleAspectFit
         imageView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }

@@ -9,11 +9,13 @@ import UIKit
 import SnapKit
 
 final class ProfileViewController: UIViewController {
-
+    // MARK: - 프로퍼티
     private let proFileView = ProfileView()
-    
     private let viewModel = ProfileViewModel()
-    
+}
+
+extension ProfileViewController{
+    // MARK: - 라이프 사이클
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -21,11 +23,14 @@ final class ProfileViewController: UIViewController {
 }
 
 private extension ProfileViewController{
+    // MARK: - SetUp 메서드
+
     func setUp(){
         view.backgroundColor = .systemBackground
         setUpProfileView()
 
     }
+    
     func setUpProfileView(){
         view.addSubview(proFileView)
         proFileView.myCollectionView.delegate = self

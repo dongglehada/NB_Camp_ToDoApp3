@@ -7,13 +7,7 @@
 
 import Foundation
 
-final class CatApiManager {
-    
-    static let shared = CatApiManager()
-    
-    private init(){
-        
-    }
+ struct CatApiManager {
     
     func fetchImage(completion: @escaping (_ items: ImageDatum) -> Void) {
         let apiKey = APIKEY.seo.getApiKey

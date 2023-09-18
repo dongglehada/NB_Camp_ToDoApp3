@@ -11,7 +11,7 @@ final class RandomImageViewModel{
     
     var viewUpdate : (_ url:URL) -> Void = {url in }
     
-    private let apiManager = CatApiManager.shared
+    private let apiManager = CatApiManager()
     
     func fetchImage(){
         apiManager.fetchImage { items in

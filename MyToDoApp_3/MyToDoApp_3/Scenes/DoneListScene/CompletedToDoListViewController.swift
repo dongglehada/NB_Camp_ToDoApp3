@@ -23,7 +23,7 @@ extension CompletedToDoListViewController{
 }
 
 private extension CompletedToDoListViewController{
-    // MARK: - 메서드
+    // MARK: - SetUp 메서드
     
     func setUp(){
         view.backgroundColor = .systemBackground

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TitleSetButton: UIButton {
+final class TitleSetButton: UIButton {
 
     init(title:String, fontColor: UIColor) {
         super.init(frame: CGRect.zero)

@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class ProfileView: UIView {
-
+    
     private let userNameLabel = UILabel()
     private let menuButton = UIButton()
     private let profileImage = UIImageView()
@@ -31,7 +31,19 @@ final class ProfileView: UIView {
         control.selectedSegmentIndex = 0
         return control
     }()
+    let myCollectionView:UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        let rowCount:CGFloat = 3
+        flowLayout.scrollDirection = .vertical
+        flowLayout.itemSize = CGSize(width: (Constant.viewWidth / rowCount), height: (Constant.viewWidth / rowCount))
+        flowLayout.minimumLineSpacing = 0
+        flowLayout.minimumInteritemSpacing = 0
+        
+        return collectionView
+    }()
     
+    // MARK: - 이니셜라이저
     init() {
         super.init(frame: CGRect.zero)
         setUp()
@@ -40,10 +52,10 @@ final class ProfileView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 private extension ProfileView{
+    // MARK: - 메서드
     
     func setUp(){
         setUpUserNameLabel()
@@ -53,6 +65,7 @@ private extension ProfileView{
         setUpInfoStackView()
         setUpButtonStackView()
         setUpSegmentedControl()
+        setUpCollectionView()
     }
     
     func setUpUserNameLabel(){
@@ -85,7 +98,7 @@ private extension ProfileView{
             make.top.equalTo(userNameLabel.snp.bottom).offset(14)
             make.width.height.equalTo(88)
             make.left.equalTo(self.snp.left).inset(14)
-
+            
         }
     }
     
@@ -162,4 +175,11 @@ private extension ProfileView{
         }
     }
     
+    func setUpCollectionView(){
+        self.addSubview(myCollectionView)
+        myCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(segmentedControl.snp.bottom).offset(3)
+            make.left.right.bottom.equalToSuperview()
+        }
+    }
 }

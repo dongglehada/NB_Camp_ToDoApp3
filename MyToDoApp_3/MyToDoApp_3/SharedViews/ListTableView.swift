@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListTableView: UITableView {
+final class ListTableView: UITableView {
 
     init() {
         super.init(frame: CGRect.zero, style: .plain)

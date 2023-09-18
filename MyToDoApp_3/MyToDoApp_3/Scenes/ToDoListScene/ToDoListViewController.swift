@@ -17,6 +17,7 @@ final class ToDoListViewController: UIViewController {
     private let addButton = TitleSetButton(title: "추가", fontColor: .link)
     
 }
+
 extension ToDoListViewController{
     // MARK: - 라이프 사이클
     override func viewDidLoad() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UnderlineSegmentedControl: UISegmentedControl {
+final class UnderlineSegmentedControl: UISegmentedControl {
     
     private lazy var underlineView: UIView = {
         let width = self.bounds.size.width / CGFloat(self.numberOfSegments)
@@ -21,6 +21,20 @@ class UnderlineSegmentedControl: UISegmentedControl {
         return view
     }()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.removeBackgroundAndDivider()
+    }
+    
+    override init(items: [Any]?) {
+        super.init(items: items)
+        self.removeBackgroundAndDivider()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = 0
@@ -29,17 +43,6 @@ class UnderlineSegmentedControl: UISegmentedControl {
             withDuration: 0.1,
             animations: { self.underlineView.frame.origin.x = underlineFinalXPosition }
         )
-    }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.removeBackgroundAndDivider()
-    }
-    override init(items: [Any]?) {
-        super.init(items: items)
-        self.removeBackgroundAndDivider()
-    }
-    required init?(coder: NSCoder) {
-        fatalError()
     }
 }
 private extension UnderlineSegmentedControl{

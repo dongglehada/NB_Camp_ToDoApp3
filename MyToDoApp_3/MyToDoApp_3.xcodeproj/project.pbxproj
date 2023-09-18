@@ -17,6 +17,8 @@
 		0854F9B02AB2FB96009DF9A5 /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */; };
 		0854F9B22AB3197D009DF9A5 /* CompletedToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */; };
 		089F76752AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F76742AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift */; };
+		089F76782AB7F6B7001D6C12 /* ProfileVIewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F76772AB7F6B7001D6C12 /* ProfileVIewCollectionViewCell.swift */; };
+		089F767A2AB7F82A001D6C12 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F76792AB7F82A001D6C12 /* ProfileViewModel.swift */; };
 		08BE30AE2AB41EC6007E1ACD /* RandomImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */; };
 		08BE30B12AB4205A007E1ACD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B02AB4205A007E1ACD /* Secret.swift */; };
 		08BE30B32AB420CC007E1ACD /* CatApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B22AB420CC007E1ACD /* CatApiManager.swift */; };
@@ -47,6 +49,8 @@
 		0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
 		0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedToDoListViewModel.swift; sourceTree = "<group>"; };
 		089F76742AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineSegmentedControl.swift; sourceTree = "<group>"; };
+		089F76772AB7F6B7001D6C12 /* ProfileVIewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVIewCollectionViewCell.swift; sourceTree = "<group>"; };
+		089F76792AB7F82A001D6C12 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewController.swift; sourceTree = "<group>"; };
 		08BE30B02AB4205A007E1ACD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		08BE30B22AB420CC007E1ACD /* CatApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApiManager.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		08461DA12AB176AB0079E581 /* ProfileScene */ = {
 			isa = PBXGroup;
 			children = (
+				089F76792AB7F82A001D6C12 /* ProfileViewModel.swift */,
 				08461D9F2AB176960079E581 /* ProfileViewController.swift */,
 				08BE30B82AB437E9007E1ACD /* ProfileView.swift */,
 			);
@@ -158,7 +163,7 @@
 		0854F9AE2AB2FB06009DF9A5 /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
-				0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */,
+				089F76762AB7F69D001D6C12 /* Cells */,
 				08DA01BA2AB0504F006F9A7D /* TitleSetButton.swift */,
 				0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */,
 				08BE30BA2AB43E41007E1ACD /* CountTitleVIew.swift */,
@@ -166,6 +171,15 @@
 				08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		089F76762AB7F69D001D6C12 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */,
+				089F76772AB7F6B7001D6C12 /* ProfileVIewCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		08BE30AF2AB41ECC007E1ACD /* RandomImageScene */ = {
@@ -299,10 +313,12 @@
 				08461D982AB175460079E581 /* ToDoListViewController.swift in Sources */,
 				08461DA02AB176960079E581 /* ProfileViewController.swift in Sources */,
 				08FB2A972AB0933B00109EE0 /* Constant.swift in Sources */,
+				089F76782AB7F6B7001D6C12 /* ProfileVIewCollectionViewCell.swift in Sources */,
 				08DA01B92AB0490E006F9A7D /* MainViewModel.swift in Sources */,
 				08BE30AE2AB41EC6007E1ACD /* RandomImageViewController.swift in Sources */,
 				08BE30B12AB4205A007E1ACD /* Secret.swift in Sources */,
 				08461DA32AB1957D0079E581 /* ToDoListViewModel.swift in Sources */,
+				089F767A2AB7F82A001D6C12 /* ProfileViewModel.swift in Sources */,
 				08DA01B42AB045FD006F9A7D /* MainViewController.swift in Sources */,
 				08DA01BB2AB0504F006F9A7D /* TitleSetButton.swift in Sources */,
 				08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */,

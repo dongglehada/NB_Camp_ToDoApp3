@@ -6,24 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
+    let proFileView = ProfileView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBackground
+        view.addSubview(proFileView)
+        proFileView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -21,7 +21,11 @@ final class MainViewController: UIViewController {
     private let profileVCButton = TitleSetButton(title: "ProfileViewContorller", fontColor: .link)
     
     private let viewModel = MainViewModel()
-    
+}
+
+extension MainViewController{
+    // MARK: - 라이프 사이클
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -42,9 +46,11 @@ private extension MainViewController{
     func setUpLogoImageView(){
         view.addSubview(logoImage)
         guard let url = URL(string: viewModel.logoURL) else { return }
+        
         logoImage.urlLoad(url: url){
             
         }
+        
         logoImage.contentMode = .scaleAspectFit
         logoImage.snp.makeConstraints { make in
             make.width.equalTo(Constant.main.logoImageWidth)
@@ -96,16 +102,21 @@ private extension MainViewController{
         switch button{
         case checkListButton:
             vc = ToDoListViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         case cmpListButton:
             vc = CompletedToDoListViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         case randomImageButton:
             vc = RandomImageViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         case profileVCButton:
             vc = ProfileViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         default:
             print("Please connect a new VC")
         }
-        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
 }

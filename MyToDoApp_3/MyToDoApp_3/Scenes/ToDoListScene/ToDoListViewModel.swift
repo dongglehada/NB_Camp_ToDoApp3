@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+// 클린아키텍쳐..
 
 final class TodoListViewModel{
     

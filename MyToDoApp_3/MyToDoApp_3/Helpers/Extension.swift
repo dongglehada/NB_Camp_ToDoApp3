@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UIImageView{
-    
     func urlLoad(url:URL, completion: @escaping () -> Void){
         DispatchQueue.global().async { [weak self] in
             print("imageLoadStart")
@@ -26,8 +25,16 @@ extension UIImageView{
     }
 }
 
+extension UIImage {
+    func resizedImage(to targetSize: CGSize) -> UIImage? {
+        let render = UIGraphicsImageRenderer(size: targetSize)
+        return render.image { ctx in
+            self.draw(in: .init(origin: .zero, size: targetSize))
+        }
+    }
+}
+
 extension CGFloat{
-    
     static let defalutPadding:CGFloat = 16
 }
 

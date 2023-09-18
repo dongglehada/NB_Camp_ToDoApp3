@@ -16,11 +16,14 @@
 		0854F9AD2AB2CFA3009DF9A5 /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */; };
 		0854F9B02AB2FB96009DF9A5 /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */; };
 		0854F9B22AB3197D009DF9A5 /* CompletedToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */; };
+		089F76752AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F76742AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift */; };
 		08BE30AE2AB41EC6007E1ACD /* RandomImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */; };
 		08BE30B12AB4205A007E1ACD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B02AB4205A007E1ACD /* Secret.swift */; };
 		08BE30B32AB420CC007E1ACD /* CatApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B22AB420CC007E1ACD /* CatApiManager.swift */; };
 		08BE30B52AB421BA007E1ACD /* ImageDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B42AB421BA007E1ACD /* ImageDatum.swift */; };
 		08BE30B72AB424D8007E1ACD /* RandomImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B62AB424D8007E1ACD /* RandomImageViewModel.swift */; };
+		08BE30B92AB437E9007E1ACD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30B82AB437E9007E1ACD /* ProfileView.swift */; };
+		08BE30BB2AB43E41007E1ACD /* CountTitleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE30BA2AB43E41007E1ACD /* CountTitleVIew.swift */; };
 		08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019C2AB04582006F9A7D /* AppDelegate.swift */; };
 		08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA019E2AB04582006F9A7D /* SceneDelegate.swift */; };
 		08DA01A62AB04582006F9A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DA01A52AB04582006F9A7D /* Assets.xcassets */; };
@@ -43,11 +46,14 @@
 		0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 		0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
 		0854F9B12AB3197D009DF9A5 /* CompletedToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedToDoListViewModel.swift; sourceTree = "<group>"; };
+		089F76742AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineSegmentedControl.swift; sourceTree = "<group>"; };
 		08BE30AD2AB41EC6007E1ACD /* RandomImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewController.swift; sourceTree = "<group>"; };
 		08BE30B02AB4205A007E1ACD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		08BE30B22AB420CC007E1ACD /* CatApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApiManager.swift; sourceTree = "<group>"; };
 		08BE30B42AB421BA007E1ACD /* ImageDatum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDatum.swift; sourceTree = "<group>"; };
 		08BE30B62AB424D8007E1ACD /* RandomImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewModel.swift; sourceTree = "<group>"; };
+		08BE30B82AB437E9007E1ACD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		08BE30BA2AB43E41007E1ACD /* CountTitleVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountTitleVIew.swift; sourceTree = "<group>"; };
 		08DA01992AB04582006F9A7D /* MyToDoApp_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoApp_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DA019C2AB04582006F9A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DA019E2AB04582006F9A7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				08461D9F2AB176960079E581 /* ProfileViewController.swift */,
+				08BE30B82AB437E9007E1ACD /* ProfileView.swift */,
 			);
 			path = ProfileScene;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 				0854F9AC2AB2CFA3009DF9A5 /* ToDoListCell.swift */,
 				08DA01BA2AB0504F006F9A7D /* TitleSetButton.swift */,
 				0854F9AF2AB2FB96009DF9A5 /* ListTableView.swift */,
+				08BE30BA2AB43E41007E1ACD /* CountTitleVIew.swift */,
+				089F76742AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift */,
 				08DA01A72AB04582006F9A7D /* LaunchScreen.storyboard */,
 			);
 			path = SharedViews;
@@ -297,6 +306,8 @@
 				08DA01B42AB045FD006F9A7D /* MainViewController.swift in Sources */,
 				08DA01BB2AB0504F006F9A7D /* TitleSetButton.swift in Sources */,
 				08DA019D2AB04582006F9A7D /* AppDelegate.swift in Sources */,
+				08BE30BB2AB43E41007E1ACD /* CountTitleVIew.swift in Sources */,
+				089F76752AB7EDCD001D6C12 /* UnderlineSegmentedControl.swift in Sources */,
 				08DA019F2AB04582006F9A7D /* SceneDelegate.swift in Sources */,
 				08BE30B52AB421BA007E1ACD /* ImageDatum.swift in Sources */,
 				08DA01B62AB0463F006F9A7D /* Extension.swift in Sources */,
@@ -305,6 +316,7 @@
 				0854F9B02AB2FB96009DF9A5 /* ListTableView.swift in Sources */,
 				08BE30B72AB424D8007E1ACD /* RandomImageViewModel.swift in Sources */,
 				08BE30B32AB420CC007E1ACD /* CatApiManager.swift in Sources */,
+				08BE30B92AB437E9007E1ACD /* ProfileView.swift in Sources */,
 				0854F9AD2AB2CFA3009DF9A5 /* ToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

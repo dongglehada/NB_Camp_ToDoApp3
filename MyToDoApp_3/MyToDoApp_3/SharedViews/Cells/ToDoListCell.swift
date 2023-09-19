@@ -16,9 +16,9 @@ class ToDoListCell: UITableViewCell {
     
     private var completedButton = UIButton()
     
-    var cellDelegate: ButtonTappedDelegate?
+    weak var cellDelegate: ButtonTappedDelegate?
     
-    var task: Task = Task()
+    weak var task: Task = Task()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

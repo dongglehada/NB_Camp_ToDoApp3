@@ -55,7 +55,8 @@ private extension ToDoListViewController{
     
     @objc func didTappedAddButton(){
         print(#function)
-        showAlert(title: "할일 추가", type: .add) { alert in
+        showAlert(title: "할일 추가", type: .add) { [weak self] alert in
+            guard let self = self else{ return }
             guard let text = alert.textFields?.first?.text else { return }
             self.viewModel.addToDo(title: text)
         }
@@ -66,7 +67,7 @@ private extension ToDoListViewController{
     func showAlert(title: String, type: CRUDOperator, closure: @escaping (_ alert:UIAlertController) -> Void){
         
         let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "완료", style: .default) { _ in
+        let ok = UIAlertAction(title: "완료", style: .default) { [weak self] _ in
             closure(alert)
         }
         let cancel = UIAlertAction(title: "취소", style: .destructive) { _ in }
@@ -99,14 +100,16 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            showAlert(title: "메모를 삭제합니다", type: .delete) { alert in
+            showAlert(title: "메모를 삭제합니다", type: .delete) { [weak self] alert in
+                guard let self = self else { return }
                 self.viewModel.deleteToDo(task: self.viewModel.getToDoList().reversed()[indexPath.row])
             }
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
-        showAlert(title: "메모 수정", type: .update) { alert in
+        showAlert(title: "메모 수정", type: .update) { [weak self] alert in
+            guard let self = self else {return}
             guard let title = alert.textFields?.first?.text else { return }
             self.viewModel.updateToDoTitle(task: self.viewModel.getToDoList().reversed()[indexPath.row], title: title)
         }

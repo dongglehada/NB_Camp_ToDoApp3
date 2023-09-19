@@ -10,7 +10,11 @@ import Foundation
 final class CompletedToDoListViewModel{
     
     var viewUpdate : () -> Void = {}
-    private var coreDataManager = CoreDataManager.shared
+    private var coreDataManager = CoreDataManager()
+    
+    deinit{
+        print("completedTodoListViewModel deinit")
+    }
     
 }
 extension CompletedToDoListViewModel{

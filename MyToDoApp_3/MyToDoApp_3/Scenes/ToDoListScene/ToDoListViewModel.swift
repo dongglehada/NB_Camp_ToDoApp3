@@ -11,7 +11,14 @@ import CoreData
 final class TodoListViewModel{
     
     var viewUpdate : () -> Void = {}
-    private var coreDataManager = CoreDataManager.shared
+    private var coreDataManager = CoreDataManager()
+    
+    init() {
+        print("TodoListViewModel init")
+    }
+    deinit{
+        print("TodoListViewModel deinit")
+    }
 }
 
 extension TodoListViewModel{
@@ -19,38 +26,37 @@ extension TodoListViewModel{
 
     //정보 가져오기
     func getToDoList() -> [Task]{
-        print(#function)
-        return coreDataManager.getToDoListFromCoreData()
+        return self.coreDataManager.getToDoListFromCoreData()
     }
     
     //완료토글 수정하기
     func updateToDoCompletedToggle(task: Task){
-        print(#function)
-        coreDataManager.updateCompleted(task: task) {
+        coreDataManager.updateCompleted(task: task) { [weak self] in
+            guard let self = self else {return}
             self.viewUpdate()
         }
     }
     
     //내용 수정하기
     func updateToDoTitle(task:Task, title:String){
-        print(#function)
-        coreDataManager.updateToDo(task: task, newTitle: title) {
+        coreDataManager.updateToDo(task: task, newTitle: title) { [weak self] in
+            guard let self = self else {return}
             self.viewUpdate()
         }
     }
     
     //정보 추가하기
     func addToDo(title: String){
-        print(#function)
-        coreDataManager.saveToDoData(title: title) {
+        coreDataManager.saveToDoData(title: title) { [weak self] in
+            guard let self = self else {return}
             self.viewUpdate()
         }
     }
 
     //정보 삭제하기
     func deleteToDo(task:Task){
-        print(#function)
-        coreDataManager.deleteToDo(task: task) {
+        coreDataManager.deleteToDo(task: task) { [weak self] in
+            guard let self = self else {return}
             self.viewUpdate()
         }
     }

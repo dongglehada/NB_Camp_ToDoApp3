@@ -10,12 +10,13 @@ import CoreData
 import UIKit
 
 final class CoreDataManager{
-    
-    static let shared = CoreDataManager()
-    private init() {}
     private let appDelegate = UIApplication.shared.delegate as? AppDelegate
     private lazy var context = appDelegate?.persistentContainer.viewContext
     private let modelName: String = "Task"
+    
+    deinit{
+        print("코어데이터 메니저 deinit")
+    }
 }
 extension CoreDataManager{
     // MARK: - CRUD

@@ -62,9 +62,7 @@ private extension RandomImageViewController{
                 self.activityIndicator.startAnimating()
             }
             self.imageView.urlLoad(url: url) {
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                }
+                self.activityIndicator.stopAnimating()
             }
         }
     }
